@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/darkBg"
+        android:orientation="vertical"
+        android:padding="28dp"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Student Grade Checker"
+            android:textColor="@color/textPrimary"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter score and preferred language"
+            android:textColor="@color/textMuted"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:layout_marginBottom="32dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider"
+            android:layout_marginBottom="24dp"/>
+
+        <EditText
+            android:id="@+id/scoreEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter score (0–100)"
+            android:inputType="number"
+            android:textColor="@color/textPrimary"
+            android:textColorHint="@color/textMuted"
+            android:background="@drawable/bg_stat"
+            android:padding="14dp"
+            android:layout_marginBottom="12dp"/>
+
+        <EditText
+            android:id="@+id/langEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Language code (ZA_ZU, ZA_ST, or EN)"
+            android:inputType="text"
+            android:textColor="@color/textPrimary"
+            android:textColorHint="@color/textMuted"
+            android:background="@drawable/bg_stat"
+            android:padding="14dp"
+            android:layout_marginBottom="14dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ZA_ZU"
+                android:textColor="@color/accentPink"
+                android:textSize="11sp"
+                android:background="@drawable/bg_stat"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:layout_marginEnd="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ZA_ST"
+                android:textColor="@color/accentPink"
+                android:textSize="11sp"
+                android:background="@drawable/bg_stat"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:layout_marginEnd="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EN (default)"
+                android:textColor="@color/textMuted"
+                android:textSize="11sp"
+                android:background="@drawable/bg_stat"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/calculateButton"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/bg_btn_pink"
+            android:text="Check Grade"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:stateListAnimator="@null"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/resultTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/accentPink"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:padding="18dp"
+            android:background="@drawable/bg_stat"/>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
